@@ -2,9 +2,11 @@ package com.raghav.assignment.exception;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @Builder
+@EqualsAndHashCode(callSuper=false)
 public class APIGenericException extends RuntimeException{
 
     private static final long serialVersionID = 1L;
