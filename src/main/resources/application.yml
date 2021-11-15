@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: d44f6074ca9a8eecff29
+            clientSecret: a23495f068eaf9f90545a6e7301d1dc1199d80a2
+            accessTokenUri: https://github.com/login/oauth/access_token
+            userAuthorizationUri: https://github.com/login/oauth/authorize
+            clientAuthenticationScheme: form
+      resource:
+        user-info-uri: https://api.github.com/user
+        prefer-token-info: false
+
+
+spring.h2.console.enabled: true
+spring.datasource.url: jdbc:h2:mem:testdb
+##spring.jpa.show-sql: true
+spring.jpa.defer-datasource-initialization: true
