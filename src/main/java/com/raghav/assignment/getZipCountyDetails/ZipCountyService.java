@@ -58,7 +58,6 @@ public class ZipCountyService {
     public Object updateZipById(String zip_code, ZipDto zipDto) {
 
 
-
         ZipEntity zipEntity;
 
         zipEntity = zipRepository.findByZip(Integer.parseInt(zip_code));
@@ -69,12 +68,12 @@ public class ZipCountyService {
             BeanUtils.copyProperties(zipDto, zipEntity);
             zipRepository.save(zipEntity);
 
-        }
+
 
        /* zipRepository.findByZip(Integer.parseInt(zip_code))==null?throw new DataNotFoundException(String.format("No Records Found for : %s", zip_code)):
         zipRepository.save(BeanUtils.copyProperties(zipDto, zipEntity));*/
 
-
-        return ResponseMessage.builder().responseMessage("Records has been updated").httpStatus(HttpStatus.ACCEPTED).id(String.format("Zip_code : %s",zip_code)).build();
+            return ResponseMessage.builder().responseMessage("Records has been updated").httpStatus(HttpStatus.ACCEPTED).id(String.format("Zip_code : %s", zip_code)).build();
+        }
     }
 }

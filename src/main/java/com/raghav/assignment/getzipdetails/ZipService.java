@@ -43,7 +43,7 @@ public class ZipService {
 
         List<CSVRecord> csvRecordList = csvParser.stream().collect(Collectors.toList());
 
-        //log.info("CSV Parser Count" + String.valueOf(csvRecordList.size()));
+        log.info("CSV Parser Count" + String.valueOf(csvRecordList.size()));
 
         for (CSVRecord csvRecords : csvRecordList) {
 
